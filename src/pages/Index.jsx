@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import { ExpenseProvider } from "../context/ExpenseContext";
+// import DashboardLayout from "../layouts/DashboardLayout";
+import Dashboard from "../components/Dashboard";
+import DashboardLayout from "../layout/DashboardLayout";
 
-function Index() {
+const Index = () => {
   return (
-    <div>
-      hii
-    </div>
-  )
-}
+    <ExpenseProvider>
+      <DashboardLayout>
+        <Dashboard />
+      </DashboardLayout>
+    </ExpenseProvider>
+  );
+};
 
-export default Index
+export default Index;
